@@ -10,7 +10,7 @@ public class DeleteTask {
     }
 
     public void execute(String id) {
-        var task = repo.findById(id)
+        repo.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Task with id " + id + " not found"));
 
         repo.delete(id);
